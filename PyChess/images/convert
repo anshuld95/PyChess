@@ -1,0 +1,7 @@
+#!/bin/sh
+
+for f in *.icns
+do
+	my_file=$(echo "$f" | cut -d'.' -f 1)
+	sips -s format png "$f" --out "$my_file.png"
+done
